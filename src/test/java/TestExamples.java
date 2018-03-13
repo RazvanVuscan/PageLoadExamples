@@ -40,24 +40,36 @@ public class TestExamples {
         ajaxElementLocatorFactoryClass.useFindByFunction();
     }
 
+    /**
+     * Test that waits up to 20 seconds before timing out in case of an invalid WebElement locator.
+     */
     @Test
     public void runInvalidLocatorTest1() {
         ajaxElementLocatorFactoryClass = new AjaxElementLocatorFactoryClass(webDriver);
         ajaxElementLocatorFactoryClass.executeInvalidLocatorScript();
     }
 
+    /**
+     * Test that immediately times out in case of an invalid WebElement locator.
+     */
     @Test
     public void runInvalidLocatorTest2() {
         pageFactoryClass = new PageFactoryClass(webDriver);
         pageFactoryClass.executeInvalidLocatorScript();
     }
 
+    /**
+     * Test that waits for the element to become available, and clicks the element as soon as it has appeared.
+     */
     @Test
     public void runValidLocatorTest1() {
         ajaxElementLocatorFactoryClass = new AjaxElementLocatorFactoryClass(webDriver);
         ajaxElementLocatorFactoryClass.executeSignInLinkClickScript();
     }
 
+    /**
+     * Test that tries to click the element even though it is not yet available.
+     */
     @Test
     public void runValidLocatorTest2() {
         pageFactoryClass = new PageFactoryClass(webDriver);
