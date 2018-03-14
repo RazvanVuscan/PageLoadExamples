@@ -3,8 +3,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestExamples {
     private AjaxElementLocatorFactoryClass ajaxElementLocatorFactoryClass;
@@ -22,11 +22,12 @@ public class TestExamples {
         profile.setAcceptUntrustedCertificates(true);
         profile.setAssumeUntrustedCertificateIssuer(true);
 
-        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-        capabilities.setCapability(FirefoxDriver.PROFILE,profile);
-        capabilities.setCapability(FirefoxDriver.MARIONETTE,true);
+        FirefoxOptions options = new FirefoxOptions();
+        options.setCapability(FirefoxDriver.PROFILE,profile);
+        options.setCapability(FirefoxDriver.MARIONETTE,true);
 
-        webDriver = new FirefoxDriver();
+        webDriver = new FirefoxDriver(options);
+        webDriver.manage().window().maximize();
     }
 
     /**

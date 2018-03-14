@@ -19,7 +19,7 @@ public class AjaxElementLocatorFactoryClass {
 
     public AjaxElementLocatorFactoryClass(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 30), this);
     }
 
     public void executeInvalidLocatorScript() {
