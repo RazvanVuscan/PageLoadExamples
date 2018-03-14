@@ -32,7 +32,7 @@ public class PageFactoryClass {
         }
     }
 
-    public void executeSignInLinkClickScript() {
+    public void executePortfolioClickScript() {
         driver.get("http://www.filippobello.com/");
         try {
             Thread.sleep(5000);

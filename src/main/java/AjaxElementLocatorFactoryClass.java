@@ -27,7 +27,7 @@ public class AjaxElementLocatorFactoryClass {
         invalidMailLink.click();
     }
 
-    public void executeSignInLinkClickScript() {
+    public void executePortfolioClickScript() {
         StopWatch watch = new StopWatch();
         watch.start();
         driver.get("http://www.filippobello.com/");

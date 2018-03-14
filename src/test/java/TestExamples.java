@@ -65,7 +65,7 @@ public class TestExamples {
     @Test
     public void runValidLocatorTest1() {
         ajaxElementLocatorFactoryClass = new AjaxElementLocatorFactoryClass(webDriver);
-        ajaxElementLocatorFactoryClass.executeSignInLinkClickScript();
+        ajaxElementLocatorFactoryClass.executePortfolioClickScript();
     }
 
     /**
@@ -74,7 +74,7 @@ public class TestExamples {
     @Test
     public void runValidLocatorTest2() {
         pageFactoryClass = new PageFactoryClass(webDriver);
-        pageFactoryClass.executeSignInLinkClickScript();
+        pageFactoryClass.executePortfolioClickScript();
     }
 
     @After
